@@ -4,9 +4,9 @@
         "testsdox": "bash ./vendor/bin/phpunit --testdox --configuration phpunit.xml"
     },
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "": "src/"
+        }
     },
     "require": {
         "php": ">=7.3"

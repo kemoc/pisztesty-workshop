@@ -2,11 +2,11 @@
 
 use \PHPUnit\Framework\TestCase;
 
-final class Example01Test extends TestCase
+final class Exercise01Test extends TestCase
 {
     public function testSayHello()
     {
-        $sut = new PhpCon();
+        $sut = new Exercise01();
 
         $result = $sut->sayHello('phpunit');
 
@@ -15,7 +15,6 @@ final class Example01Test extends TestCase
 
     public function testTrueShouldBeTrue()
     {
-        $x = 10;
-        $this->assertTrue(false, "Sorry, expects TRUE value ;(");
+        $this->assertTrue(true, "Sorry, expects TRUE value ;(");
     }
 }

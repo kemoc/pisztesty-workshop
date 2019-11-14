@@ -1,6 +1,6 @@
 <?php
 
-class PhpCon
+class Exercise01
 {
     public function sayHello($username)
     {
