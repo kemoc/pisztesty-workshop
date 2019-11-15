@@ -73,3 +73,40 @@ System rezerwacji reklam multimedialnych.
 - Lokalizacja jest określona przez nazwę miasta oraz ulicy
 
 Zalecane jest aby każdy z powyższych podpunktów był interpretowany jako minimum jeden cykl Red-Green-Refactor.
+
+# Wybrane sposoby nazywania przypadków testowych
+
+MethodName_StateUnderTest_ExpectedBehavior
+- isAdult_AgeLessThan18_False
+- withdrawMoney_InvalidAccount_ExceptionThrown
+- admitStudent_MissingMandatoryFields_FailToAdmit
+   
+MethodName_ExpectedBehavior_StateUnderTest
+- isAdult_False_AgeLessThan18
+- withdrawMoney_ThrowsException_IfAccountIsInvalid
+- admitStudent_FailToAdmit_IfMandatoryFieldsAreMissing
+   
+MethodName_Given[xx]_When[xx]_Then[xxx]
+- sumOfTwoNumbers_givenTwoPositiveNumbers_WhenNumbersArePositive_ThenResultIsPositive()
+- test[Feature being tested]
+- testIsNotAnAdultIfAgeLessThan18
+- testFailToWithdrawMoneyIfAccountIsInvalid
+- testStudentIsNotAdmittedIfMandatoryFieldsAreMissing
+   
+Feature to be tested
+- IsNotAnAdultIfAgeLessThan18
+- FailToWithdrawMoneyIfAccountIsInvalid
+- StudentIsNotAdmittedIfMandatoryFieldsAreMissing
+   
+Should_ExpectedBehavior_When_StateUnderTest
+- Should_ThrowException_When_AgeLessThan18
+- Should_FailToWithdrawMoney_ForInvalidAccount
+- Should_FailToAdmit_IfMandatoryFieldsAreMissing
+   
+When_StateUnderTest_Expect_ExpectedBehavior
+- When_AgeLessThan18_Expect_isAdultAsFalse
+- When_InvalidAccount_Expect_WithdrawMoneyToFail
+- When_MandatoryFieldsAreMissing_Expect_StudentAdmissionToFail
+   
+Given_Preconditions_When_StateUnderTest_Then_ExpectedBehavior
+- Given_UserIsAuthenticated_When_InvalidAccountNumberIsUsedToWithdrawMoney_Then_TransactionsWillFail
