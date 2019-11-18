@@ -11,7 +11,7 @@ final class RebateTest extends TestCase
     {
         $rebate = new Rebate();
 
-        $this->expectException(InvalidUserAgeException::class);
+        $this->expectException(AgeCantBeZeroException::class);
 
         $rebate->check($age);
     }

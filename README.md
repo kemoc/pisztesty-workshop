@@ -47,7 +47,7 @@ Zamiast sztywnych danych w posiadanych testach, przygotuj zestaw danych dostarcz
 
 Dla wieku niejszego niż zero rzuć wyjątkiem AgeCantBeZeroException oraz napisz do tego odpowiedni test.
 
-Dla wieku powyżej 115 lat rzuć wyjątkiem YouCantBeOlderThan115YearsException oraz napisz odpowiedni test.
+Dla wieku powyżej 115 lat rzuć wyjątkiem AgeCantBeHigherThan115Exception oraz napisz odpowiedni test.
 
 # Zadanie 08 - Testy UserService
 
